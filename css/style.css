@@ -1,0 +1,125 @@
+:root {
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-p: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-h: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Inter", sans-serif;
+}
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-dark-blue);
+    padding: 40px;
+}
+main .box {
+    display: flex;
+    background-color: var(--Dark-desaturated-blue);
+    max-width: 1080px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 446px;
+}
+main .box .content {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    gap: 20px;
+}
+main .box .content h1 {
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--White);
+    font-size: 35px;
+}
+main .box .content h1 span {
+    color: var(--Soft-violet);
+}
+main .box .content p {
+    color: var(--Slightly-transparent-white-h);
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+main .box .content .status {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+main .box .content .status div {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+main .box .content .status div span:nth-child(1) {
+    color: var(--White);
+    font-size: 24px;
+    font-weight: 700;
+}
+main .box .content .status div span:nth-child(2) {
+    color: var(--Slightly-transparent-white-p);
+    font-weight: normal;
+    margin-top: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+main .box .img {
+    flex: 50%;
+    background-color: var(--Soft-violet);
+}
+main .box .img picture {
+}
+main .box .img picture  img {
+    mix-blend-mode: multiply;
+}
+
+@media (max-width: 760px){
+    main {
+        padding: 10px;
+    }
+    main .box {
+        flex-direction: column-reverse;
+        min-width: 350px;
+        max-width: fit-content;
+        height: fit-content;
+    }
+    main .box .content {
+        padding: 30px;
+        text-align: center;
+    }
+    main .box .content h1 {
+        font-size: 25px;
+    }
+    main .box .content p {
+        text-align: center;
+        font-size: 14px;
+    }
+    main .box .img {
+        flex: 30%;
+    }
+    main .box .img picture  img {
+        max-width: 100%;
+    }
+    main .box .content  {
+        flex: 70%;
+    }
+    main .box .content .status {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
